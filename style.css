@@ -27,8 +27,27 @@
     -webkit-text-stroke-width: 5px;
     -webkit-text-stroke-color: #580304;
     background-color: transparent;
-    opacity: 0.5;
+    animation: fadeInOut 3s  ease-in-out infinite;
+    /* opacity: 0.5; */
 }
+
+@keyframes fadeInOut {
+    0% {
+      opacity: 0.2; /* Start with fully transparent */
+    }
+    25% {
+      opacity: 0.4; /* Fade in, full opacity */
+    }
+    50%{
+        opacity: 1;
+    }
+    75% {
+      opacity: 0.4; /* Hold at full opacity */
+    }
+    100% {
+      opacity: 0.2; /* Fade out, fully transparent */
+    }
+  }
 
 .gallery-heading-white h2 {
     font-size: 8vmin !important;
@@ -56,6 +75,7 @@
 
 /* gallery heading  end  */
 
+/* gallery body start */
 .image-wrapper{
     position:relative;
     height: 252px;
@@ -96,7 +116,134 @@
 
 .gallery-img-content p{
     font-family: "Poppins", sans-serif;
-    /* font-size: 18px; */
     color: white;
     margin: 0;
+}
+
+
+/* download paage css start here */
+
+.download-page-main{
+    width: 100%;
+    background-image:url(./assets/images/download_bg.png);
+    background-position: top;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.left-download-content h1{
+    font-size:60px;
+    font-family: "Poppins", sans-serif !important;
+    color: white;
+    font-weight: 600;
+}
+
+.left-download-content p{
+    color: white;
+    font-family: "Poppins", sans-serif !important;
+    font-weight: 400;
+}
+
+.download-img{
+    width: 100%;
+   
+    border: 1px solid red;
+    border-radius: 30px;
+    overflow: hidden;
+}
+/*  */
+.download-applies-main img{
+    width: 70%;
+}
+
+.left-download{
+    display: block;
+    display: flex;
+    justify-content: end;
+}
+
+.download-content h3 , .applies-content h3{
+    color: white;
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.download-content{
+     position: absolute;
+     left: 56%;
+     top: 10%;
+}
+
+.applies-content{
+    position: absolute;
+    top: 10px;
+    left: 25%;
+}
+
+.download-wrapper{
+    z-index: 50 !important;
+}
+
+.download-applies-main .download-wrapper::before{
+    content:"";
+    width: 35%;
+    height: 40px;
+    background:radial-gradient(#580304 , transparent);
+    position: absolute !important;
+    bottom:-30px;
+    left: 50%;
+    filter: blur(10px);
+    border-radius: 100%;
+    z-index:1;
+}
+
+.applies-wrapper::before{
+    content:"";
+    width: 35%;
+    height: 40px;
+    background:radial-gradient(#580304 , transparent);
+    position: absolute !important;
+    bottom:-30px;
+    left: 20%;
+    filter: blur(10px);
+    border-radius: 100%;
+    z-index:1;
+}
+
+
+/* scholarship start here */
+
+.scholarship-main{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(./assets/images/scholarship_bg.png);
+    background-position:top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.scholarship-main table , .scholarship-main tr , .scholarship-main td{
+    border: 2px solid black;
+}
+
+.scholarship-main table {
+    color: grey;
+}
+
+.scholarship-main table tr td{
+    padding: 10px !important;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.scholarship-main-heading h3{
+    font-size: 55px;
+    font-family: "Poppins", sans-serif !important;
+}
+
+.scholarship-main-heading h4{
+    font-size:10vmin;
+    font-family: "Poppins", sans-serif !important;
+    line-height: 70px;
+    font-weight: 700;
 }
