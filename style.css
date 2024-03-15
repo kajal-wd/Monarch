@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Teko:wght@300..700&display=swap');
+
+/* main section */
+.gallery-main {
+    width: 100%;
+    background-image: url(./assets/images/BG.png);
+    background-position: top;
+    background-size: cover;
+    padding: 50px 0px;
+}
+
+/* gallery heading css start */
+.gallery-heading-main {
+    position: relative;
+}
+
+@font-face {
+    font-family: gallery-font;
+    src: url(./text/ethnocentric\ rg.otf);
+}
+
+.gallery-heading-black h1 {
+    font-family: gallery-font !important;
+    text-align: center;
+    font-size: 15vmin;
+    color: transparent;
+    -webkit-text-stroke-width: 5px;
+    -webkit-text-stroke-color: #580304;
+    background-color: transparent;
+    opacity: 0.5;
+}
+
+.gallery-heading-white h2 {
+    font-size: 8vmin !important;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    color: #FF0000;
+    /* filter: drop-shadow( 0px 0 8px red); */
+    text-shadow: 0 0 10px #FF0000;
+}
+
+.gallery-heading-white h3 {
+    font-size: 11vmin;
+    font-family: gallery-font;
+    color: white;
+    line-height: 60px;
+
+}
+
+.gallery-heading-white {
+    position: absolute;
+    top: -26px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* gallery heading  end  */
+
+.image-wrapper{
+    position:relative;
+    height: 252px;
+    transition: 0.1s all ease-in-out;
+}
+
+.inner-photo {
+    position: absolute;
+    z-index: 1;
+    left: 4%;
+    /* bottom: -27px; */
+    width: 94%;
+    height: 87%;
+    top: 8%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.photo-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+}
+
+.image-wrapper:hover{
+    scale:1.1;
+}
+
+.gallery-img-content h3{
+    font-family: gallery-font !important;
+    font-size: 3vmin;
+    margin: 0;
+    color: white;
+}
+
+.gallery-img-content p{
+    font-family: "Poppins", sans-serif;
+    /* font-size: 18px; */
+    color: white;
+    margin: 0;
+}
